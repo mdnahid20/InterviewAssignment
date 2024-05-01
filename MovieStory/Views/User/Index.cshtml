@@ -1,0 +1,46 @@
+﻿@model List<Movie>
+
+@{
+    ViewData["Title"] = "User Page";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/User/Index.css">
+</head>
+
+<body>
+    <div class="row">
+        <label for="email" class="col-sm-2">Email address :</label>
+        <p id="email" class="col-sm-10"></p>
+    </div>
+    <br />
+    <div class="movieSearchBar">
+        <div class="searchLine">
+            <select id="movieSearchBy" onchange="handleChoiceChange()">
+                <option value="Title">Title</option>
+                <option value="Cast">Cast</option>
+                <option value="Category">Category</option>
+            </select>
+            <input type="search" id="movieSearch" placeholder="Search" onkeypress="handleSearch(event)">
+        </div>
+    </div>
+
+    <br />
+    <br />
+    <div>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Title</th>
+                    <th scope="col">Cast</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody id="movieTableBody">
+            </tbody>
+        </table>
+    </div>
+
+    <script src="~/js/User/Index.js"></script>
+</body>

@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/Home/Index.css">
+</head>
+
+<body>
+<div class="movieSearchBar">
+    <div class="searchLine">
+            <select id="movieSearchBy" onchange="handleChoiceChange()">
+            <option value="Title">Title</option>
+            <option value="Cast">Cast</option>
+            <option value="Category">Category</option>
+        </select>
+            <input type="search" id="movieSearch" placeholder="Search" onkeypress="handleSearch(event)">
+            <label style="margin-left:10px;">Favourite</label>
+            <input onclick="checkbox()" id="favouriteCheckbox" type="checkbox" style="margin-right:700px;" />
+     </div>
+</div>
+
+<br /><br />
+<div>
+    <table class ="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Cast</th>
+                <th scope="col">Category</th>
+                <th scope="col">Action</th>
+            </tr>           
+        </thead>
+        <tbody id="movieTableBody">
+        </tbody>
+    </table>
+</div>
+
+<script src="~/js/Home/Index.js"></script>
+</body>

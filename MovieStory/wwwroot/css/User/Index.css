@@ -1,0 +1,13 @@
+﻿.searchLine {
+    display: flex;
+    align-items: center;
+}
+
+    .searchLine select {
+        margin-right: 10px;
+        width: 200px;
+    }
+
+    .searchLine input {
+        width: 200px;
+    }
